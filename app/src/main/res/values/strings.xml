@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">MVOpoPortfolio</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="objective_text">
+        Focusing on Mobile Development to enhance my skills in a dynamic and fast paced workplace,
+            and to be able to use it with best practices and professionalism
+    </string>
+
+    <string name="skills_text">
+        -	Good foundation in Mobile Programming(ANDROID)
+        \n-	Good foundation in Java Programming
+        \n-	Good foundation in OOP
+        \n-	Good problem solving skills
+        \n-	Knowledgeable in HTML, CSS, JAVASCRIPT, PHP, ASP
+        \n-	Resourceful, flexible and willing to learn
+    </string>
+
+    <string name="educational_background_text">
+        <b><i>Tertiary:</i></b>
+        \nUniversity of Cebu-Main
+		\nSanciangko St., Pahina Central,
+        \nCebu, 6000
+        \nS.Y. 2012-2016
+
+        \n\n<b><i>Secondary:</i></b>
+        \nMandaue City School for the Arts
+		\nKapasananCasili, Mandaue City,
+		\nCebu, 6014
+        \nS.Y. 2008-2012
+
+    </string>
+
+    <string name="doh_info_text">
+        <b><i>
+        Osmeña Blvd,
+        \nCebu City,
+        </i></b>
+
+        \n\nPosition: <b><i>Android Developer</i></b>
+        \nProjects: <b><i>PHA Check-App, Referral App, Check-App DMO</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+        \nDate: <b><i>Oct. 2017 - Present</i></b>
+    </string>
+
+    <string name="gte_info_text">
+        <b><i>
+        8th Metrobank Plaza Building,
+        \nJones Ave. Cebu city
+        </i></b>
+
+        \n\nPosition: <b><i>Android Developer</i></b>
+        \nProjects: <b><i>Event Management App, Gemmary Dashboard, Sms Manager, Progear Easyload</i></b>
+        \nSkills Used: <b><i>Android, ASP</i></b>
+        \nDate: <b><i>Jun. 2016 - Oct. 2017</i></b>
+    </string>
+
+    <string name="nmn_info_text">
+        <b><i>
+        Robinland Business Center,
+        \nZuellig Avenue,
+        \nNorth Reclamation Area,
+        \nMandaue City
+        </i></b>
+
+        \n\nPosition: <b><i>Android Developer (OJT)</i></b>
+        \nProjects: <b><i>Confidential</i></b>
+        \nSkills Used: <b><i>Android, PHP</i></b>
+        \nDate: <b><i>2014</i></b>
+    </string>
+
+    <string name="guia_info_text">
+        <b><i>
+        A social discovery app that connects travelers to like-minded locals.
+        </i></b>
+
+        \n\nRole: <b><i>Android Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="checkapp_info_text">
+        <b><i>
+        A system that supports both online and offline profiling of poor and non-poor individual.
+            Currently used by NDPs all over Region VII.
+        </i></b>
+
+        \n\nRole: <b><i>Android Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="jimmy_info_text">
+        Position: <b><i>Web Developer</i></b>
+        \nContact no.: <b><i>09280978266</i></b>
+        \nWorkplace: <b><i>
+                        Talisay District Hospital,
+                        San Isidro, Dakbayan sa Talisay,
+                        6045 Lalawigan ng Cebu
+                     </i></b>
+    </string>
+
+    <string name="ditdit_info_text">
+        Position: <b><i>PHA Check-Up Coordinator/Nurse</i></b>
+        \nContact no.: <b><i></i></b>
+        \nWorkplace: <b><i>
+                        Department of Health Region VII,
+                        Osmeña Blvd, Cebu City, Cebu
+                     </i></b>
+    </string>
+
+    <string name="efren_info_text">
+        Position: <b><i>IT Admin Aide</i></b>
+        \nContact no.: <b><i>09229182494</i></b>
+        \nWorkplace: <b><i>
+                        Department of Health Region VII,
+                        Osmeña Blvd, Cebu City, Cebu
+                     </i></b>
+    </string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="To: markvincentopo@gmail.com"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#fff" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/mail_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border_10rad"
+                android:hint="Company Name"
+                android:inputType="textCapWords"
+                android:maxLength="20"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/mail_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_border_10rad"
+                android:hint="Contact Email/Number"
+                android:inputType="textCapWords"
+                android:maxLength="20"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/mail_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_border_10rad"
+                android:hint="Subject"
+                android:inputType="textCapWords"
+                android:maxLength="20"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/mail_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_border_10rad"
+                android:gravity="top"
+                android:hint="Details here..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:minHeight="150dp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
