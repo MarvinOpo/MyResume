@@ -213,14 +213,14 @@ public class FloatingSmsService extends Service implements ServiceContract.servi
         stopSelf.setAction(ServiceContract.ACTION_STOP);
         PendingIntent pStopSelf = PendingIntent.getService(this, 0, stopSelf, PendingIntent.FLAG_CANCEL_CURRENT);
 
-        Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.mipmap.ic_launcher);
+//        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+//                R.drawable.notification_icon);
 
         Notification notification = new NotificationCompat.Builder(this)
-                .setContentTitle("Floating Message")
+                .setContentTitle("MVOpo Messaging Service")
                 .setContentText("Tap to stop application")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(Bitmap.createScaledBitmap(icon, 128, 128, false))
+                .setSmallIcon(R.drawable.notification_icon)
+//                .setLargeIcon(Bitmap.createScaledBitmap(icon, 128, 128, false))
                 .setContentIntent(pStopSelf)
                 .setOngoing(true)
                 .build();

@@ -119,4 +119,14 @@
                         Osmeña Blvd, Cebu City, Cebu
                      </i></b>
     </string>
+
+
+    <string name="civ"><u>hdodenhof/CircleImageView</u></string>
+    <string name="civ_info">A fast circular ImageView perfect for profile images</string>
+
+    <string name="bgmail"><u>yesidlazaro/GmailBackground</u></string>
+    <string name="bgmail_info">A small library to send a email in background without user interaction</string>
+
+    <string name="icons8"><u>ICONS8</u></string>
+    <string name="icons8_info">An application that generates icons in any color, size and format</string>
 </resources>

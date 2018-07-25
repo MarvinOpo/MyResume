@@ -1,8 +1,13 @@
 package com.mvopo.myresume;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -16,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowInsets;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.mvopo.myresume.Fragment.AboutFragment;
 import com.mvopo.myresume.Fragment.ContactFragment;
@@ -24,7 +30,7 @@ import com.mvopo.myresume.Fragment.ProjectsFragment;
 import com.mvopo.myresume.Fragment.ReferenceFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private FragmentManager fm;
     private FragmentTransaction ft;
@@ -42,7 +48,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         toolbar.setTitleTextColor(Color.TRANSPARENT);
@@ -70,7 +76,16 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Are you sure you want to exit app?");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    MainActivity.super.onBackPressed();
+                }
+            });
+            builder.setNegativeButton("Cancel", null);
+            builder.show();
         }
     }
 
@@ -90,10 +105,26 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            showSettingDialog();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+        switch (id) {
+            case R.id.civ_link:
+                openLink("https://github.com/hdodenhof/CircleImageView");
+                break;
+            case R.id.bgmail_link:
+                openLink("https://github.com/yesidlazaro/GmailBackground");
+                break;
+            case R.id.icon8_link:
+                openLink("https://icons8.com/");
+                break;
+        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -121,7 +152,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void removeNavGrayBar(){
+    public void removeNavGrayBar() {
         if (navigationView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
             navigationView.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() {
                 @Override
@@ -130,5 +161,27 @@ public class MainActivity extends AppCompatActivity
                 }
             });
         }
+    }
+
+    public void showSettingDialog() {
+        View settingDialog = getLayoutInflater().inflate(R.layout.setting_dialog, null);
+
+        TextView civLink = settingDialog.findViewById(R.id.civ_link);
+        TextView bgmailLink = settingDialog.findViewById(R.id.bgmail_link);
+        TextView icons8Link = settingDialog.findViewById(R.id.icon8_link);
+
+        civLink.setOnClickListener(this);
+        bgmailLink.setOnClickListener(this);
+        icons8Link.setOnClickListener(this);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(settingDialog);
+        builder.show();
+    }
+
+    public void openLink(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 }
