@@ -37,6 +37,8 @@ import com.mvopo.myresume.R;
 
 import java.util.ArrayList;
 
+import static android.support.v4.content.PermissionChecker.checkSelfPermission;
+
 /**
  * Created by mvopo on 7/16/2018.
  */
@@ -97,18 +99,18 @@ public class ContactFragment extends Fragment implements View.OnClickListener, C
 
     @Override
     public boolean smsAllowed() {
-        return ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED;
+        return checkSelfPermission(getContext(), Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED;
     }
 
     @Override
     public boolean shouldShowPermission() {
-        return ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.READ_SMS);
+        return shouldShowRequestPermissionRationale(Manifest.permission.READ_SMS);
     }
 
     @Override
     public void showPermissionDialogIntent() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage("Please allow permission required for this app." +
+        builder.setMessage("Please allow permission required for this app to use MVOpo Floating SMS." +
                 "\n\nSMS - Read and Write SMS for contacting Mark Vincent Opo.");
         builder.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
             @Override
@@ -117,6 +119,15 @@ public class ContactFragment extends Fragment implements View.OnClickListener, C
                 intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                 Uri uri = Uri.fromParts("package", getActivity().getPackageName(), null);
                 intent.setData(uri);
+                startActivity(intent);
+            }
+        });
+        builder.setNegativeButton("Use Default SMS", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                String number = "09218155172";
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.fromParts("sms", number, null));
                 startActivity(intent);
             }
         });
@@ -153,7 +164,7 @@ public class ContactFragment extends Fragment implements View.OnClickListener, C
 
     @Override
     public void requestPermission() {
-        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_SMS,
+        requestPermissions(new String[]{Manifest.permission.READ_SMS,
                 Manifest.permission.READ_PHONE_STATE}, sms_permission_code);
     }
 
@@ -206,7 +217,7 @@ public class ContactFragment extends Fragment implements View.OnClickListener, C
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     mPresenter.checkDrawOverlayPermission(true);
                 } else {
-                    Toast.makeText(getContext(), "SMS permision denied, Cant contact via SMS", Toast.LENGTH_SHORT).show();
+                    showPermissionDialogIntent();
                 }
             }
         }

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:id="@+id/root_container"
@@ -14,8 +15,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/bubble_head"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_above="@+id/resume_name"
             android:elevation="5dp"
             android:src="@drawable/profile_image"
@@ -56,14 +57,16 @@
                     android:layout_height="wrap_content"
                     android:text="To: Mark Vincent B. Opo"
                     android:textColor="#fff"
+                    android:textSize="10dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/floating_name"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="18dp"
                     android:paddingBottom="5dp"
+                    android:textSize="8dp"
                     android:text="09218155172"
                     android:textColor="#fff"
                     android:textStyle="bold" />
@@ -90,10 +93,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:background="@drawable/rounded_border_20rad"
+                    android:background="@drawable/rounded_border_10rad"
                     android:hint="Enter message..."
                     android:inputType="textCapSentences|textMultiLine"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorPrimary" />
 
                 <ImageView
                     android:id="@+id/message_send"
