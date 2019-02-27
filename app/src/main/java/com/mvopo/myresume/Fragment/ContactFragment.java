@@ -80,7 +80,8 @@ public class ContactFragment extends Fragment implements View.OnClickListener, C
 
         switch (id) {
             case R.id.btn_sms:
-                mPresenter.checkPermission();
+                String number = "09218155172";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
                 break;
             case R.id.btn_mail:
                 showMailDialog();

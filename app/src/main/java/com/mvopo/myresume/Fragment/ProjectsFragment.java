@@ -44,6 +44,33 @@ public class ProjectsFragment extends Fragment{
             R.drawable.checkapp5
     };
 
+    private int[] ref = new int[]{
+            R.drawable.ref1,
+            R.drawable.ref2
+    };
+
+    private int[] fsms = new int[]{
+            R.drawable.fsms1,
+            R.drawable.fsms2,
+            R.drawable.fsms3,
+            R.drawable.fsms4
+    };
+
+    private int[] memoir = new int[]{
+            R.drawable.memoir1,
+            R.drawable.memoir2,
+            R.drawable.memoir3,
+            R.drawable.memoir4,
+            R.drawable.memoir5
+    };
+
+    private int[] fcard = new int[]{
+            R.drawable.fcard1,
+            R.drawable.fcard2,
+            R.drawable.fcard3,
+            R.drawable.fcard4
+    };
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,7 +86,11 @@ public class ProjectsFragment extends Fragment{
     public void populateProjects(){
         projects.clear();
         projects.add(new Project("PHA Check-App", getResources().getString(R.string.checkapp_info_text), pha_check_app));
+        projects.add(new Project("Memoir", getResources().getString(R.string.memoir_info_text), memoir));
+        projects.add(new Project("FlashCard", getResources().getString(R.string.fcard_info_text), fcard));
         projects.add(new Project("Guia", getResources().getString(R.string.guia_info_text), guia));
+        projects.add(new Project("Referral App", getResources().getString(R.string.referral_info_text), ref));
+        projects.add(new Project("Floating SMS", getResources().getString(R.string.fsms_info_text), fsms));
     }
 
     public void initView(){

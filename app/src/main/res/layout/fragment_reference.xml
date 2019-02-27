@@ -46,46 +46,46 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="3dp"
-        android:layout_marginTop="10dp">
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:cardElevation="4dp"-->
+        <!--app:cardCornerRadius="3dp"-->
+        <!--android:layout_marginTop="10dp">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:orientation="horizontal"
-            android:padding="10dp">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="top"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="10dp">-->
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/doh_location_image" />
+            <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:src="@drawable/doh_location_image" />-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ronadit Arriesgado"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textStyle="bold" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Ronadit Arriesgado"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                    <!--android:textStyle="bold" />-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ditdit_info_text" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/ditdit_info_text" />-->
+            <!--</LinearLayout>-->
 
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+        <!--</LinearLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"

@@ -93,10 +93,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:background="@drawable/rounded_border_10rad"
+                    android:background="@drawable/rounded_border_20rad"
                     android:hint="Enter message..."
                     android:inputType="textCapSentences|textMultiLine"
-                    android:padding="10dp"
+                    android:padding="8dp"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/colorPrimary" />
 

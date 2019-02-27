@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -32,6 +33,7 @@ import com.mvopo.myresume.Fragment.ReferenceFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    private DrawerLayout drawer;
     private FragmentManager fm;
     private FragmentTransaction ft;
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity
     private ReferenceFragment rf = new ReferenceFragment();
     private ContactFragment cf = new ContactFragment();
 
+    private Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         toolbar.setTitleTextColor(Color.TRANSPARENT);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -104,7 +107,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_credit) {
             showSettingDialog();
         }
 
@@ -136,19 +139,26 @@ public class MainActivity extends AppCompatActivity
         ft = fm.beginTransaction();
 
         if (id == R.id.nav_about) {
-            ft.replace(R.id.fragment_container, af).commit();
+            ft.replace(R.id.fragment_container, af);
         } else if (id == R.id.nav_experience) {
-            ft.replace(R.id.fragment_container, ef).commit();
+            ft.replace(R.id.fragment_container, ef);
         } else if (id == R.id.nav_projects) {
-            ft.replace(R.id.fragment_container, pf).commit();
+            ft.replace(R.id.fragment_container, pf);
         } else if (id == R.id.nav_character_reference) {
-            ft.replace(R.id.fragment_container, rf).commit();
+            ft.replace(R.id.fragment_container, rf);
         } else if (id == R.id.nav_contact) {
-            ft.replace(R.id.fragment_container, cf).commit();
+            ft.replace(R.id.fragment_container, cf);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        ft.commit();
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                drawer.closeDrawer(GravityCompat.START);
+            }
+        }, 50);
+
         return true;
     }
 

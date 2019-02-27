@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_credit">Credits</string>
 
     <string name="objective_text">
         Focusing on Mobile Development to enhance my skills in a dynamic and fast paced workplace,
@@ -41,7 +41,7 @@
         \nCebu City,
         </i></b>
 
-        \n\nPosition: <b><i>Android Developer</i></b>
+        \n\nPosition: <b><i>Mobile Developer</i></b>
         \nProjects: <b><i>PHA Check-App, Referral App, Check-App DMO</i></b>
         \nSkills Used: <b><i>Android</i></b>
         \nDate: <b><i>Oct. 2017 - Present</i></b>
@@ -53,7 +53,7 @@
         \nJones Ave. Cebu city
         </i></b>
 
-        \n\nPosition: <b><i>Android Developer</i></b>
+        \n\nPosition: <b><i>Mobile Developer</i></b>
         \nProjects: <b><i>Event Management App, Gemmary Dashboard, Sms Manager, Progear Easyload</i></b>
         \nSkills Used: <b><i>Android, ASP</i></b>
         \nDate: <b><i>Jun. 2016 - Oct. 2017</i></b>
@@ -67,19 +67,10 @@
         \nMandaue City
         </i></b>
 
-        \n\nPosition: <b><i>Android Developer (OJT)</i></b>
+        \n\nPosition: <b><i>Mobile Developer (OJT)</i></b>
         \nProjects: <b><i>Confidential</i></b>
         \nSkills Used: <b><i>Android, PHP</i></b>
         \nDate: <b><i>2014</i></b>
-    </string>
-
-    <string name="guia_info_text">
-        <b><i>
-        A social discovery app that connects travelers to like-minded locals.
-        </i></b>
-
-        \n\nRole: <b><i>Android Developer</i></b>
-        \nSkills Used: <b><i>Android</i></b>
     </string>
 
     <string name="checkapp_info_text">
@@ -88,7 +79,55 @@
             Currently used by NDPs all over Region VII.
         </i></b>
 
-        \n\nRole: <b><i>Android Developer</i></b>
+        \n\nRole: <b><i>Mobile Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="memoir_info_text">
+        <b><i>
+        An application that serves as medium to store memories that an individual writes about.
+        </i></b>
+
+        \n\nRole: <b><i>Mobile Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="fcard_info_text">
+        <b><i>
+        A swipeable card containing words and numbers. It is a learning aid that flashes several words according to setting.
+            It also helps enhance word pronunciation through a mini game.
+        </i></b>
+
+        \n\nRole: <b><i>Mobile Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="guia_info_text">
+        <b><i>
+        A social discovery app that connects travelers to like-minded locals. Serves as my thesis project.
+        </i></b>
+
+        \n\nRole: <b><i>Mobile Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="fsms_info_text">
+        <b><i>
+        A floating window for sending sms. I made this app so i dont need to exit reading manga
+            or playing games while texting.
+        </i></b>
+
+        \n\nRole: <b><i>Mobile Developer</i></b>
+        \nSkills Used: <b><i>Android</i></b>
+    </string>
+
+    <string name="referral_info_text">
+        <b><i>
+        An app service notifier that listens to event from website to alert Doctors for new referrals. Alerts phone via sound
+            and vibrate. Powered by Firebase.
+        </i></b>
+
+        \n\nRole: <b><i>Mobile Developer</i></b>
         \nSkills Used: <b><i>Android</i></b>
     </string>
 
@@ -113,7 +152,7 @@
 
     <string name="efren_info_text">
         Position: <b><i>IT Admin Aide</i></b>
-        \nContact no.: <b><i>09229182494</i></b>
+        \nContact no.: <b><i>09956238255</i></b>
         \nWorkplace: <b><i>
                         Department of Health Region VII,
                         Osmeña Blvd, Cebu City, Cebu
